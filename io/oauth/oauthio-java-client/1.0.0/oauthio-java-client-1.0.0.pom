@@ -53,7 +53,7 @@
             <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
             <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
             <includes><include>**/*</include></includes>
-            <repositoryName>sdk-java</repositoryName>      <!-- github repo name -->
+            <repositoryName>oauthio-server-java</repositoryName>      <!-- github repo name -->
             <repositoryOwner>oauth-io</repositoryOwner>    <!-- github username  -->
         </configuration>
         <executions>
