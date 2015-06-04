@@ -1,0 +1,26 @@
+-classpath
+'/Users/bumpmann/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar:/Users/bumpmann/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.3.4/jackson-dataformat-yaml-2.3.4.jar:/Users/bumpmann/.m2/repository/com/sun/jersey/jersey-core/1.18/jersey-core-1.18.jar:/Users/bumpmann/.m2/repository/com/sun/jersey/contribs/jersey-multipart/1.18/jersey-multipart-1.18.jar:/Users/bumpmann/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.4.2/jackson-annotations-2.4.2.jar:/Users/bumpmann/.m2/repository/com/wordnik/swagger-annotations/1.5.3-M1/swagger-annotations-1.5.3-M1.jar:/Users/bumpmann/.m2/repository/com/sun/jersey/jersey-client/1.18/jersey-client-1.18.jar:/Users/bumpmann/.m2/repository/org/jvnet/mimepull/mimepull/1.9.3/mimepull-1.9.3.jar:/Users/bumpmann/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.1.5/jackson-datatype-joda-2.1.5.jar:/Users/bumpmann/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.4.2/jackson-databind-2.4.2.jar:/Users/bumpmann/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.4.2/jackson-core-2.4.2.jar'
+-encoding
+'UTF-8'
+-public
+-sourcepath
+'/Users/bumpmann/Desktop/projects/swagger-codegen/oauthio/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2015. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/bumpmann/Desktop/projects/swagger-codegen/oauthio/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'oauthio-java-client 1.0.0 API'
+-linkoffline
+'http://docs.oracle.com/javase/6/docs/api' '/Users/bumpmann/Desktop/projects/swagger-codegen/oauthio/target/javadoc-bundle-options'
+-nodeprecated
+-nohelp
+-use
+-version
+-windowtitle
+'oauthio-java-client 1.0.0 API'
