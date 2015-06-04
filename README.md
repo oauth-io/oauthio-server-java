@@ -85,7 +85,7 @@ If the user is not logged in, you need to redirect him to the log in page **with
 
 This decision page endpoint should reply with *text/html* content-type and should contain at least:
 
-- The client informations: **name**, **description**. These informations can be received through the [ClientApi.getClient]() method.
+- The client informations: **name**, **description**. These informations can be received through the [ClientApi.getClient](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/api/ClientApi.html#getClient-java.lang.String-) method.
 
 - The scopes of the authorization asked by the client. If present, this **must** be a list of space-delimited, case-sensitive strings passed in the url query.
 
@@ -95,19 +95,19 @@ This decision page endpoint should reply with *text/html* content-type and shoul
 
 Once the user allow or deny the decision page, it should send a POST /authorize request to your server, so you should define this endpoint in your backend.
 
-In this endpoint, you have to call the [AuthorizationApi.authorize]() method with the given query and body parameters. That will reply an [AuthCallback]() object that contains the callback url where you must redirect the user, with a `code` in the query parameters.
+In this endpoint, you have to call the [AuthorizationApi.authorize](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/api/AuthorizationApi.html#authorize-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-) method with the given query and body parameters. That will reply an [AuthCallback](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/model/AuthCallback.html) object that contains the callback url where you must redirect the user, with a `code` in the query parameters.
 
 ## Step 3 - Create the POST /token endpoint
 
 Once the user has its code, he will make a call to your server to exchange this code for a valid `access_token`/`refresh_token`.
 
-In this endpoint, you must call the [AuthorizationApi.token]() method with the given query and body parameters. This methods replies an [TokenSet]() object that you must send back to your user. We recommend to send it back with the *application/json* type using the [TokenSet.toJson]() method.
+In this endpoint, you must call the [AuthorizationApi.token](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/api/AuthorizationApi.html#token-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-) method with the given query and body parameters. This methods replies an [TokenSet](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/model/TokenSet.html) object that you must send back to your user. We recommend to send it back with the *application/json* type using the [TokenSet.toJson](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/model/TokenSet.html#toJson--) method.
 
 Here, the user has a valid access token which can be used on your API to access restricted content/feature of your API.
 
 ## Step 4 - Access Token and Scopes validity
 
-Now, you need to secure the API endpoint you need to restrict the access to authorized users. To do this, you just need to call the [AuthorizationApi.check]() method with the  **access_token** received either from the Authorization http header (bearer token) or body/query parameter. This API call return all information about the access token (the user_id, the scopes he has authorized etc..) in a [TokenInfos]() object. You can use the scope to restrict some feature depending the permissions the user has accepted.
+Now, you need to secure the API endpoint you need to restrict the access to authorized users. To do this, you just need to call the [AuthorizationApi.check](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/api/AuthorizationApi.html#check-java.lang.String-) method with the  **access_token** received either from the Authorization http header (bearer token) or body/query parameter. This API call return all information about the access token (the user_id, the scopes he has authorized etc..) in a [TokenInfos](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/model/TokenInfos.html) object. You can use the scope to restrict some feature depending the permissions the user has accepted.
 
 ## Step 5 - Link OAuth.io with your server
 
@@ -124,4 +124,4 @@ The easiest way is by directly using OAuth.io as your developer portal as you ha
 
 At this step, you have a working OAuth and developer can already use you via OAuth.io. You can also build your own developer portal using the OAuth.io Server API.
 
-The [ClientApi]() object contains all the useful methods to create, edit or remove a client, get a client informations or a list of clients filtered by user, or regenerate the secret key of a client.
+The [ClientApi](http://oauth-io.github.io/oauthio-server-java/io/oauth/server/api/ClientApi.html) object contains all the useful methods to create, edit or remove a client, get a client informations or a list of clients filtered by user, or regenerate the secret key of a client.
