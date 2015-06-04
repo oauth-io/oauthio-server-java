@@ -118,7 +118,7 @@ public class ApiInvoker {
      defaultHeaderMap.put(key, value);
   }
 
-  public void setProviderKeys(String providerId, String providerSecret) {
+  public void initialize(String providerId, String providerSecret) {
     String basicAuth = providerId + ":" + providerSecret;
     String authorization = new String(Base64Coder.encode(basicAuth.getBytes()));
     defaultHeaderMap.put("Authorizationp", "Basic " + authorization);

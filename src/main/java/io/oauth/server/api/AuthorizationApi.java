@@ -36,8 +36,8 @@ public class AuthorizationApi {
     return basePath;
   }
 
-  public void setProviderKeys(String providerId, String providerSecret) {
-    apiInvoker.setProviderKeys(providerId,providerSecret);
+  public static void initialize(String providerId, String providerSecret) {
+    ApiInvoker.getInstance().initialize(providerId, providerSecret);
   }
 
   

@@ -34,8 +34,8 @@ public class ClientApi {
     return basePath;
   }
 
-  public void setProviderKeys(String providerId, String providerSecret) {
-    apiInvoker.setProviderKeys(providerId,providerSecret);
+  public static void initialize(String providerId, String providerSecret) {
+    ApiInvoker.getInstance().initialize(providerId, providerSecret);
   }
 
   
@@ -124,7 +124,7 @@ public class ClientApi {
   /**
    * Retrieves all clients
    * 
-   * @return List<Client>
+   * @return List&lt;Client&gt;
    */
   public List<Client> getAllClients () throws ApiException {
     Object postBody = null;
@@ -157,7 +157,7 @@ public class ClientApi {
    * Retrieves all clients filtered by a given user_id
    * 
    * @param userId User id
-   * @return List<Client>
+   * @return List&lt;Client&gt;
    */
   public List<Client> getAllClientsByUser (String userId) throws ApiException {
     Object postBody = null;
